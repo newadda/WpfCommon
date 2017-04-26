@@ -1,8 +1,8 @@
-﻿using Common.Common.Converters.TransString.Token;
+﻿using WPFCommon.Common.Converters.TransString.Token;
 using System.Collections.Generic;
 
 
-namespace Common.Common.Converters.TransString
+namespace WPFCommon.Common.Converters.TransString
 {
     /// <summary>
     /// 원본문자열을 포맷팅하지않는다. 기본임

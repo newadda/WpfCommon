@@ -1,8 +1,8 @@
-﻿using Common.Common.Converters.TransString.Token;
+﻿
 using System.Collections.Generic;
+using WPFCommon.Common.Converters.TransString.Token;
 
-
-namespace Common.Common.Converters.TransString
+namespace WPFCommon.Common.Converters.TransString
 {
 
     /// <summary>

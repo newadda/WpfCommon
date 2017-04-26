@@ -1,8 +1,8 @@
-﻿using Common.Common.Converters.TransString.Token;
+﻿using WPFCommon.Common.Converters.TransString.Token;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Common.Common.Converters.TransString
+namespace WPFCommon.Common.Converters.TransString
 {
     /// <summary>
     /// 변경된 문자열에 대한 클래스

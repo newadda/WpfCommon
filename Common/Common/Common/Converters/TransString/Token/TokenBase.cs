@@ -1,4 +1,4 @@
-﻿namespace Common.Common.Converters.TransString.Token
+﻿namespace WPFCommon.Common.Converters.TransString.Token
 {
     public interface  TokenBase
     {

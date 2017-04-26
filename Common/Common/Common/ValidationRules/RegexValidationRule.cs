@@ -7,7 +7,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 
-namespace Common.Common.ValidationRules
+namespace WPFCommon.Common.ValidationRules
 {
     public class RegexValidationRule : ValidationRule
     {

@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="WPFCommon.Practice.Converters.ConverterTestUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFCommon.Practice.Converters"
+             xmlns:converters="clr-namespace:WPFCommon.Common.Converters"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.DataContext>
+        <local:ConverterTestUCViewModel></local:ConverterTestUCViewModel>
+    </UserControl.DataContext>
+    <UserControl.Resources>
+        <converters:MultiValueToStringFormat x:Key="multiValueToStringFormat"></converters:MultiValueToStringFormat>
+        <sys:String x:Key="stringFormat">{0}이고 {1}이고 {2}다</sys:String>
+    </UserControl.Resources>
+    <Grid Background="White">
+        <!-- MultiBinding 테스트 ConverterParameter 는 지역화 가능해서 언어 resource에 각국에 언어 지정해 놓으면 편하다. -->
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top">
+            <TextBlock.Text>
+                <MultiBinding Converter="{StaticResource ResourceKey=multiValueToStringFormat}" ConverterParameter="{}{0}이고 {1}이고 {2}다">
+                    <Binding Path="Test1"></Binding>
+                    <Binding Path="Test2"></Binding>
+                    <Binding Path="Test3"></Binding>
+                </MultiBinding>
+            </TextBlock.Text>
+        </TextBlock>
+        
+        <TextBlock x:Name="tb2" HorizontalAlignment="Left" Margin="10,30,0,0" TextWrapping="Wrap"  VerticalAlignment="Top">
+            <TextBlock.Text>
+                <MultiBinding Converter="{StaticResource ResourceKey=multiValueToStringFormat}" ConverterParameter="{StaticResource stringFormat}">
+                    <Binding Path="Test1"></Binding>
+                    <Binding Path="Test2"></Binding>
+                    <Binding Path="Test3"></Binding>
+                </MultiBinding>
+            </TextBlock.Text>
+        </TextBlock>
+      
+    </Grid>
+</UserControl>

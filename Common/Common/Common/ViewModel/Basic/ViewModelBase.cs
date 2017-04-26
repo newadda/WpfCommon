@@ -7,7 +7,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common.Common.ViewModel.Basic
+namespace WPFCommon.Common.ViewModel.Basic
 {
     /// <summary>
     /// 아주 간단한 ViewModelBase
@@ -16,7 +16,15 @@ namespace Common.Common.ViewModel.Basic
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public virtual void OnPropertyChanged(string propertyName)        {            PropertyChangedEventHandler handler = this.PropertyChanged;            if (handler != null)            {                var e = new PropertyChangedEventArgs(propertyName);                handler(this, e);            }        }
+        public virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChangedEventHandler handler = this.PropertyChanged;
+            if (handler != null)
+            {
+                var e = new PropertyChangedEventArgs(propertyName);
+                handler(this, e);
+            }
+        }
 
         public void OnPropertyChanged<T>(System.Linq.Expressions.Expression<Func<T>> propertyExpression)
         {

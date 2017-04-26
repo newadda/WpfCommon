@@ -1,9 +1,9 @@
-﻿using Common.Common.Converters.TransString.Token;
+﻿using WPFCommon.Common.Converters.TransString.Token;
 using System.Collections.Generic;
 
 
 
-namespace Common.Common.Converters.TransString
+namespace WPFCommon.Common.Converters.TransString
 {
     /// <summary>
     /// 문자열을 패스워드(마지막은 보이게) 바꾼다.

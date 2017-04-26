@@ -8,7 +8,7 @@ using System.Runtime.Remoting.Proxies;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common.Common.Proxy
+namespace WPFCommon.Common.Proxy
 {
     /// <summary>
     /// Proxy는 Interface의 메소드뿐 아니라 속성까지 Proxy한다.

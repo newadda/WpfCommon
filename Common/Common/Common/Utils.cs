@@ -6,7 +6,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common.Common
+namespace WPFCommon.Common
 {
     public static class Utils
     {

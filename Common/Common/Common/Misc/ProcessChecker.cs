@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common.Common.Misc
+namespace WPFCommon.Common.Misc
 {
     /// <SUMMARY>
     /// Check running processes for an already-running instance. Implements a simple and

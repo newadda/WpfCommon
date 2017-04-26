@@ -1,4 +1,4 @@
-﻿using Common.Common.ViewModel.Basic;
+﻿using WPFCommon.Common.ViewModel.Basic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Common.Common.Tasking
+namespace WPFCommon.Common.Tasking
 {
 
     public enum TaskSimpleStatus { NONE, RUNNING, FAILED, CANCELED, COMPLETED }

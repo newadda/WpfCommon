@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common.Common.Collection
+namespace WPFCommon.Common.Collection
 {
     /// <summary>
     /// 옵저버블딕셔너리

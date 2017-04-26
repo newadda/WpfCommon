@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common.Common.Misc
+namespace WPFCommon.Common.Misc
 {
     /// <summary>
     ///  참고 : http://www.geodatasource.com 

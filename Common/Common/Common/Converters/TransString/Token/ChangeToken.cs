@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Common.Common.Converters.TransString.Token
+namespace WPFCommon.Common.Converters.TransString.Token
 {
     /// <summary>
     /// 원본문자의 변경문자

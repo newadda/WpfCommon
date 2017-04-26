@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Common.Common.Converters.TransString
+namespace WPFCommon.Common.Converters.TransString
 {
     /// <summary>
     /// 원본 문자열에 대한 정보

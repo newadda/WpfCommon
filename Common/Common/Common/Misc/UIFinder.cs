@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media;
 
-namespace Common.Common.Misc
+namespace WPFCommon.Common.Misc
 {
     public static class UIFinder
     {

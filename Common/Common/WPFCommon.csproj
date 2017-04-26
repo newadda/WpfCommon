@@ -7,8 +7,8 @@
     <ProjectGuid>{00356774-857A-48FB-8F00-355D5F1AF588}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Common</RootNamespace>
-    <AssemblyName>Common</AssemblyName>
+    <RootNamespace>WPFCommon</RootNamespace>
+    <AssemblyName>WPFCommon</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -64,9 +64,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Common\Collection\ObservableDictionary.cs" />
+    <Compile Include="Common\Command\RelayCommand.cs" />
     <Compile Include="Common\Command\DelegateCommand.cs" />
-    <Compile Include="Common\Command\SimpleDelegateCommand.cs" />
+    <Compile Include="Common\Control\ICommunication.cs" />
+    <Compile Include="Common\Control\UserControlWithViewModel.cs" />
     <Compile Include="Common\Converters\KeyValueConverter.cs" />
+    <Compile Include="Common\Converters\MultiValueToStringFormat.cs" />
     <Compile Include="Common\Converters\TransString\MoneyConverter.cs" />
     <Compile Include="Common\Converters\TransString\NothingConverter.cs" />
     <Compile Include="Common\Converters\TransString\OriginalString.cs" />
@@ -78,11 +81,16 @@
     <Compile Include="Common\Converters\TransString\Token\StringToken.cs" />
     <Compile Include="Common\Converters\TransString\Token\TokenBase.cs" />
     <Compile Include="Common\Converters\TransString\TransString.cs" />
+    <Compile Include="Common\Intents\IIntent.cs" />
+    <Compile Include="Common\Intents\IIntentFilter.cs" />
+    <Compile Include="Common\Intents\Intent.cs" />
+    <Compile Include="Common\Intents\IntentFilter.cs" />
     <Compile Include="Common\Misc\Geo.cs" />
     <Compile Include="Common\Misc\ProcessChecker.cs" />
     <Compile Include="Common\Misc\UIFinder.cs" />
     <Compile Include="Common\Paging\Pager.cs" />
     <Compile Include="Common\Proxy\ObjectProxy.cs" />
+    <Compile Include="Common\PubSub\Upta\Hub.cs" />
     <Compile Include="Common\Tasking\TaskInfo.cs" />
     <Compile Include="Common\Utils.cs" />
     <Compile Include="Common\ValidationRules\PhoneNumberValidationRule.cs" />
@@ -92,8 +100,22 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Practice\Converters\ConverterTestUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Practice\UserControl1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Practice\Converters\ConverterTestUC.xaml.cs">
+      <DependentUpon>ConverterTestUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Practice\UserControl1.xaml.cs">
+      <DependentUpon>UserControl1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -121,8 +143,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Common\NewFolder1\" />
-    <Folder Include="Practice\" />
+    <Folder Include="Practice\Controls\CustomControls\" />
+    <Folder Include="Practice\Controls\UserControls\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -8,7 +8,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common.Common.Paging
+namespace WPFCommon.Common.Paging
 {
     public class Pager : INotifyPropertyChanged
     {

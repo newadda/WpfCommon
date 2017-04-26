@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common.Common.ValidationRules
+namespace WPFCommon.Common.ValidationRules
 {
     public class PhoneNumberValidationRule : RegexValidationRule
     {

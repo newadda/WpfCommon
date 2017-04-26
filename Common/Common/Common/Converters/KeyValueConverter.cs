@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Data;
 
-namespace Common.Common.Converters
+namespace WPFCommon.Common.Converters
 {
     public class keyValue
     {

@@ -62,7 +62,7 @@ namespace WPFCommon.Common.ViewModel.Basic
             return property.Name;
         }
 
-
+       
       
     }
 }

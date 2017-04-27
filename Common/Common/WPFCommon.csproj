@@ -100,6 +100,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Practice\Controls\Dialogs\DialogTest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Practice\Controls\Dialogs\ViewModelAccess\TextInputUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Practice\Converters\ConverterTestUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -110,6 +118,12 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Practice\Controls\Dialogs\DialogTest.xaml.cs">
+      <DependentUpon>DialogTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Practice\Controls\Dialogs\ViewModelAccess\TextInputUserControl.xaml.cs">
+      <DependentUpon>TextInputUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Practice\Converters\ConverterTestUC.xaml.cs">
       <DependentUpon>ConverterTestUC.xaml</DependentUpon>
     </Compile>
@@ -144,7 +158,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Practice\Controls\CustomControls\" />
+    <Folder Include="Practice\Controls\Dialogs\NonViewModel\" />
     <Folder Include="Practice\Controls\UserControls\" />
+    <Folder Include="Practice\Validations\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -5,14 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Common"
         xmlns:Practice="clr-namespace:WPFCommon.Practice" 
+        xmlns:Practice.Dialogs="clr-namespace:WPFCommon.Practice.Controls.Dialogs" 
        xmlns:Converters="clr-namespace:WPFCommon.Practice.Converters"
     x:Class="Common.MainWindow"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
+    <Grid >
 
-        <Practice:UserControl1 x:Name="userContorl1" Margin="10,0,222,0"/>
+        <Practice:UserControl1 x:Name="userContorl1" Margin="10,0,222,0" />
       <Converters:ConverterTestUC />
-
+        <Practice.Dialogs:DialogTest></Practice.Dialogs:DialogTest>
     </Grid>
 </Window>

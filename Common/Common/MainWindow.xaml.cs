@@ -24,6 +24,7 @@ namespace Common
         public MainWindow()
         {
             InitializeComponent();
+            
         }
      
     }

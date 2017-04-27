@@ -62,11 +62,6 @@ namespace WPFCommon.Common.Control
             set { SetValue(ViewModelProperty, value); }
             get { return (Object)GetValue(ViewModelProperty); }
         }
-        
-     
-
-
-       
 
     }
 

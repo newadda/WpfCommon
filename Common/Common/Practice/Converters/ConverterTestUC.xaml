@@ -15,9 +15,9 @@
         <converters:MultiValueToStringFormat x:Key="multiValueToStringFormat"></converters:MultiValueToStringFormat>
         <sys:String x:Key="stringFormat">{0}이고 {1}이고 {2}다</sys:String>
     </UserControl.Resources>
-    <Grid Background="White">
+    <UniformGrid Rows="10" Columns="1" Background="White">
         <!-- MultiBinding 테스트 ConverterParameter 는 지역화 가능해서 언어 resource에 각국에 언어 지정해 놓으면 편하다. -->
-        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top">
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap"  VerticalAlignment="Top">
             <TextBlock.Text>
                 <MultiBinding Converter="{StaticResource ResourceKey=multiValueToStringFormat}" ConverterParameter="{}{0}이고 {1}이고 {2}다">
                     <Binding Path="Test1"></Binding>
@@ -27,7 +27,7 @@
             </TextBlock.Text>
         </TextBlock>
         
-        <TextBlock x:Name="tb2" HorizontalAlignment="Left" Margin="10,30,0,0" TextWrapping="Wrap"  VerticalAlignment="Top">
+        <TextBlock x:Name="tb2" HorizontalAlignment="Left" TextWrapping="Wrap"  VerticalAlignment="Top">
             <TextBlock.Text>
                 <MultiBinding Converter="{StaticResource ResourceKey=multiValueToStringFormat}" ConverterParameter="{StaticResource stringFormat}">
                     <Binding Path="Test1"></Binding>
@@ -36,6 +36,9 @@
                 </MultiBinding>
             </TextBlock.Text>
         </TextBlock>
+
+        <TextBlock Text="{Binding Test1,StringFormat={}나는 {0} 이다.}"></TextBlock>
       
-    </Grid>
+        
+    </UniformGrid>
 </UserControl>

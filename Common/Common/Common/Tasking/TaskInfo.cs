@@ -9,7 +9,27 @@ using System.Threading.Tasks;
 namespace WPFCommon.Common.Tasking
 {
 
-    public enum TaskSimpleStatus { NONE, RUNNING, FAILED, CANCELED, COMPLETED }
+    public enum TaskSimpleStatus {
+        /// <summary>
+        /// 작업없음
+        /// </summary>
+        NONE,
+        /// <summary>
+        /// 작업중
+        /// </summary>
+        RUNNING,
+        /// <summary>
+        /// 실패됨(Exception 발생)
+        /// </summary>
+        FAILED,
+        /// <summary>
+        /// 취소됨
+        /// </summary>
+        CANCELED,
+        /// <summary>
+        /// 완료됨
+        /// </summary>
+        COMPLETED }
 
     public class TaskInfo : ViewModelBase
     {
@@ -24,7 +44,7 @@ namespace WPFCommon.Common.Tasking
             {
                 return _CurrentTask;
             }
-            set
+            private set
             {
                 if (_CurrentTask == value) { return ; }
                 _CurrentTask = value;

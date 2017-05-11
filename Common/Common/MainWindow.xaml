@@ -10,10 +10,9 @@
     x:Class="Common.MainWindow"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid >
+    <UniformGrid Rows="12" Columns="2">
+        <Button x:Name="converterBt" Content="Converter" Click="converterBt_Click"></Button>
 
-        <Practice:UserControl1 x:Name="userContorl1" Margin="10,0,222,0" />
-      <Converters:ConverterTestUC />
-        <Practice.Dialogs:DialogTest></Practice.Dialogs:DialogTest>
-    </Grid>
+       
+    </UniformGrid>
 </Window>

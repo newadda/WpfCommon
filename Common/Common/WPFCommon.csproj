@@ -85,6 +85,7 @@
     <Compile Include="Common\Intents\IIntentFilter.cs" />
     <Compile Include="Common\Intents\Intent.cs" />
     <Compile Include="Common\Intents\IntentFilter.cs" />
+    <Compile Include="Common\IOC\SImpleIOC.cs" />
     <Compile Include="Common\Misc\Geo.cs" />
     <Compile Include="Common\Misc\ProcessChecker.cs" />
     <Compile Include="Common\Misc\UIFinder.cs" />
@@ -116,8 +117,13 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Practice\Controls\CustomControls\NumberTextBox.cs" />
     <Compile Include="Practice\Controls\Dialogs\DialogTest.xaml.cs">
       <DependentUpon>DialogTest.xaml</DependentUpon>
     </Compile>
@@ -157,7 +163,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Practice\Controls\CustomControls\" />
     <Folder Include="Practice\Controls\Dialogs\NonViewModel\" />
     <Folder Include="Practice\Controls\UserControls\" />
     <Folder Include="Practice\Validations\" />

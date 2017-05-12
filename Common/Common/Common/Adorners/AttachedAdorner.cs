@@ -9,6 +9,7 @@ using System.Windows.Threading;
 
 namespace WPFCommon.Common.Adorners
 {
+    
     public class AttachedAdorner
     {
         public static readonly DependencyProperty AdornerTypeProperty =

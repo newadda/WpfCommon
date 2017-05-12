@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WPFCommon.Common.Command;
-using WPFCommon.Common.Control;
+using WPFCommon.Common.Controls;
 using WPFCommon.Common.ViewModel.Basic;
 
 namespace WPFCommon.Practice.Controls.Dialogs.ViewModelAccess

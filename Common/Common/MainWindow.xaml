@@ -9,10 +9,26 @@
        xmlns:Converters="clr-namespace:WPFCommon.Practice.Converters"
     x:Class="Common.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="525"
+       xmlns:ad="clr-namespace:WPFCommon.Common.Adorners"
+    >
+    <Window.Resources>
+        <ControlTemplate x:Key="PopupTemplate">
+            <Grid HorizontalAlignment="Left" VerticalAlignment="Top">
+                <ad:AdornedPlaceholder/>
+                <Grid Width="150" Height="100" Margin="5 10 0 0">
+                    <Rectangle Stroke="Black" Fill="Yellow" RadiusX="6" RadiusY="6" Margin="0 20 0 0"/>
+                    <Path Stroke="Black" Fill="Yellow" Data="M 25 20 L 20 0 33 20" Margin="0 1 0 0"/>
+                    <TextBlock Text="What are you doing?" Margin="5 25 0 0"/>
+                    <TextBox Margin="5 45 5 0" VerticalAlignment="Top"/>
+                    <Button Content="Tweet" Margin="5" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
+                </Grid>
+            </Grid>
+        </ControlTemplate>
+    </Window.Resources>
     <UniformGrid Rows="12" Columns="2">
-        <Button x:Name="converterBt" Content="Converter" Click="converterBt_Click"></Button>
+        <Button x:Name="converterBt" Content="Converter" Click="converterBt_Click" ></Button>
+        <Button x:Name="testBt" Content="Converter" Click="testBt_Click" ></Button>
 
-       
     </UniformGrid>
 </Window>

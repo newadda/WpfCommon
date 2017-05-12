@@ -8,7 +8,7 @@ using System.Windows.Media;
 
 namespace WPFCommon.Common.Misc
 {
-    public static class UIFinder
+    public static class UIHelper
     {
         /// <summary>
         /// 현재 속해있는 UI Element의 부모 오브젝트 찾아서 리턴
@@ -83,5 +83,49 @@ namespace WPFCommon.Common.Misc
             return foundChild;
         }
 
+        public static T FindChildByType<T>(DependencyObject parent)
+  where T : DependencyObject
+        {
+            // Confirm parent and childName are valid.
+            if (parent == null) return null;
+
+            T foundChild = null;
+
+            int childrenCount = VisualTreeHelper.GetChildrenCount(parent);
+            for (int i = 0; i < childrenCount; i++)
+            {
+                var child = VisualTreeHelper.GetChild(parent, i);
+                // If the child is not of the request child type child
+                T childType = child as T;
+                if (childType == null)
+                {
+                    // recursively drill down the tree
+                    foundChild = FindChildByType<T>(child);
+
+                    // If the child is found, break so we do not overwrite the found child.
+                    if (foundChild != null) break;
+                }
+                else if (childType != null)
+                {
+                    var frameworkElement = child as FrameworkElement;
+                    // If the child’s name is set for search
+                    if (frameworkElement != null && frameworkElement.GetType() == childType.GetType())
+                    {
+                        // if the child’s name is of the request name
+                        foundChild = (T)child;
+                        break;
+                    }
+                }
+                else
+                {
+                    // child element found.
+                    foundChild = (T)child;
+                    break;
+                }
+            }
+
+            return foundChild;
+        }
     }
+
 }

@@ -63,11 +63,17 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Common\Adorners\AdornedPlaceholder.cs" />
+    <Compile Include="Common\Adorners\AttachedAdorner.cs" />
+    <Compile Include="Common\Adorners\ControlAdorner.cs" />
+    <Compile Include="Common\Adorners\Decorator.cs" />
+    <Compile Include="Common\Adorners\WaterMarkAdorner.cs" />
+    <Compile Include="Common\Behavior\WaterMarkBehavior.cs" />
     <Compile Include="Common\Collection\ObservableDictionary.cs" />
     <Compile Include="Common\Command\RelayCommand.cs" />
     <Compile Include="Common\Command\DelegateCommand.cs" />
-    <Compile Include="Common\Control\ICommunication.cs" />
-    <Compile Include="Common\Control\UserControlWithViewModel.cs" />
+    <Compile Include="Common\Controls\ICommunication.cs" />
+    <Compile Include="Common\Controls\UserControlWithViewModel.cs" />
     <Compile Include="Common\Converters\KeyValueConverter.cs" />
     <Compile Include="Common\Converters\MultiValueToStringFormat.cs" />
     <Compile Include="Common\Converters\TransString\MoneyConverter.cs" />
@@ -88,7 +94,7 @@
     <Compile Include="Common\IOC\SImpleIOC.cs" />
     <Compile Include="Common\Misc\Geo.cs" />
     <Compile Include="Common\Misc\ProcessChecker.cs" />
-    <Compile Include="Common\Misc\UIFinder.cs" />
+    <Compile Include="Common\Misc\UIHelper.cs" />
     <Compile Include="Common\Paging\Pager.cs" />
     <Compile Include="Common\Proxy\ObjectProxy.cs" />
     <Compile Include="Common\PubSub\Upta\Hub.cs" />
@@ -101,6 +107,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Practice\Adorners\AdornersTestUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Practice\Controls\Dialogs\DialogTest.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -123,6 +133,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Practice\Adorners\AdornersTestUC.xaml.cs">
+      <DependentUpon>AdornersTestUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Practice\Controls\CustomControls\NumberTextBox.cs" />
     <Compile Include="Practice\Controls\Dialogs\DialogTest.xaml.cs">
       <DependentUpon>DialogTest.xaml</DependentUpon>

@@ -5,6 +5,8 @@ using System.Linq.Expressions;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Media;
 
 namespace WPFCommon.Common
 {
@@ -35,5 +37,7 @@ namespace WPFCommon.Common
             return property.Name;
         }
 
+
+    
     }
 }

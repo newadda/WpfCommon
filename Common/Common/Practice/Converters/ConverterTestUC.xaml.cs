@@ -86,11 +86,51 @@ namespace WPFCommon.Practice.Converters
         }
 
 
+
+        private String _Test4;
+        public String Test4
+        {
+            set
+            {
+                if (_Test4 == value) { return; }
+                _Test4 = value;
+                OnPropertyChanged(() => Test4);
+
+            }
+            get
+            {
+                return _Test4;
+            }
+
+        }
+
+        private Type _Test5;
+        public Type Test5
+        {
+            set
+            {
+                if (_Test5 == value) { return; }
+                _Test5 = value;
+                OnPropertyChanged(() => Test5);
+
+            }
+            get
+            {
+                return _Test5;
+            }
+
+        }
+
+
+
+
         public ConverterTestUCViewModel()
         {
             Test1 = "첫번째";
             Test2 = "두번째";
             Test3 = "세번째";
+            Test4 = "Test";
+            Test5 = typeof(String);
         }
 
 

@@ -14,9 +14,28 @@
     <UserControl.Resources>
         <converters:MultiValueToStringFormat x:Key="multiValueToStringFormat"></converters:MultiValueToStringFormat>
         <sys:String x:Key="stringFormat">{0}이고 {1}이고 {2}다</sys:String>
+        
+        <converters:KeyValueConverter x:Key="keyValueConverter">
+            <converters:KeyValueConverter.Items>
+                <converters:keyValue  Value="테스트">
+                    <converters:keyValue.Key>
+                        <sys:String>Test</sys:String>
+                    </converters:keyValue.Key>
+                </converters:keyValue>
+                <converters:keyValue  Value="스트링타입">
+                    <converters:keyValue.Key>
+                        <x:Type Type="{x:Type sys:String}"></x:Type>
+                    </converters:keyValue.Key>
+                </converters:keyValue>
+            </converters:KeyValueConverter.Items>
+        </converters:KeyValueConverter>
+        
     </UserControl.Resources>
-    <UniformGrid Rows="10" Columns="1" Background="White">
-        <!-- MultiBinding 테스트 ConverterParameter 는 지역화 가능해서 언어 resource에 각국에 언어 지정해 놓으면 편하다. -->
+    <StackPanel  Background="White">
+         <TextBlock Text="MultiValueToString(MultiBinding) Example" FontWeight="Bold"></TextBlock>
+            <Border BorderThickness="1" BorderBrush="Red" >
+         <UniformGrid Rows="3" Columns="1" >
+            <!-- MultiBinding 테스트 ConverterParameter 는 지역화 가능해서 언어 resource에 각국에 언어 지정해 놓으면 편하다. -->
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap"  VerticalAlignment="Top">
             <TextBlock.Text>
                 <MultiBinding Converter="{StaticResource ResourceKey=multiValueToStringFormat}" ConverterParameter="{}{0}이고 {1}이고 {2}다">
@@ -38,7 +57,23 @@
         </TextBlock>
 
         <TextBlock Text="{Binding Test1,StringFormat={}나는 {0} 이다.}"></TextBlock>
-      
-        
-    </UniformGrid>
+       </UniformGrid>
+       </Border>
+
+        <TextBlock Text="KeyValueConverter Example" FontWeight="Bold"></TextBlock>
+        <Border BorderBrush="Red" BorderThickness="1" >
+            <UniformGrid Rows="2" Columns="1" >
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="equals to string : "></TextBlock>
+                    <TextBlock Text="{Binding Test4,Converter={StaticResource ResourceKey=keyValueConverter}}"></TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="type equals to string : "></TextBlock>
+                    <TextBlock Text="{Binding Test5,Converter={StaticResource ResourceKey=keyValueConverter}}"></TextBlock>
+                </StackPanel>
+            </UniformGrid>
+
+        </Border>
+        </StackPanel>
+
 </UserControl>

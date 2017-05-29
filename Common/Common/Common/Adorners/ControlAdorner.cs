@@ -30,50 +30,39 @@ namespace WPFCommon.Common.Adorners
         protected override Visual GetVisualChild(int index)
         {
             if (index != 0) throw new ArgumentOutOfRangeException();
-            return Child1;
+            return _child;
         }
 
         public Control Child
         {
-            get { return Child1; }
+            get { return _child; }
             set
             {
-                if (Child1 != null)
+                if (_child != null)
                 {
-                    RemoveVisualChild(Child1);
+                    RemoveVisualChild(_child);
                 }
-                Child1 = value;
-                if (Child1 != null)
-                {
-                    AddVisualChild(Child1);
-                }
-            }
-        }
-
-        public Control Child1
-        {
-            get
-            {
-                return _child;
-            }
-
-            set
-            {
                 _child = value;
+                if (_child != null)
+                {
+                    AddVisualChild(_child);
+                }
+                
             }
         }
+
 
         protected override Size MeasureOverride(Size constraint)
         {
-            Child1.Measure(constraint);
-            return Child1.DesiredSize;
+            Child.Measure(constraint);
+            return Child.DesiredSize;
         }
 
         protected override Size ArrangeOverride(Size finalSize)
         {
-            Child1.Arrange(new Rect(new Point(0, 0), finalSize));
+            Child.Arrange(new Rect(new Point(0, 0), finalSize));
             UpdateLocation();
-            return new Size(Child1.ActualWidth, Child1.ActualHeight);
+            return new Size(Child.ActualWidth, Child.ActualHeight);
         }
 
         private void UpdateLocation()

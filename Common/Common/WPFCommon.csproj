@@ -123,6 +123,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Practice\Databinding\CollectionView\CollectionViewPractice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Practice\UserControl1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -146,6 +150,11 @@
     <Compile Include="Practice\Converters\ConverterTestUC.xaml.cs">
       <DependentUpon>ConverterTestUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Practice\Databinding\CollectionView\CollectionViewViewModel.cs" />
+    <Compile Include="Practice\Databinding\CollectionView\CollectionViewPractice.xaml.cs">
+      <DependentUpon>CollectionViewPractice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Practice\Databinding\CollectionView\KeyValueModel.cs" />
     <Compile Include="Practice\UserControl1.xaml.cs">
       <DependentUpon>UserControl1.xaml</DependentUpon>
     </Compile>

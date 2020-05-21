@@ -1,0 +1,24 @@
+﻿<Window x:Class="WPFCommon.Practice.Databinding.ColltionViewPractice"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFCommon.Practice.Databinding"
+        mc:Ignorable="d"
+        Title="ColltionViewPractice" Height="308.898" Width="413.136">
+    <Grid>
+        <Button Margin="328,60,30,150" Click="Button_Click_1">검색</Button>
+        <TextBox x:Name="tbx_search" TextChanged="tbx_search_TextChanged" Margin="328,16,10,246"></TextBox>
+        <Button Click="Button_Click" Margin="328,37,15,223">데이터생성</Button>
+        <ListBox x:Name="lb_datas" ItemsSource="{Binding Path=Datas}" Margin="0,0,82,66">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Key}"></TextBlock>
+                        <TextBlock Text="{Binding Value}"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Window>

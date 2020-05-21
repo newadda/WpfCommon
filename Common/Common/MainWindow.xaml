@@ -31,5 +31,7 @@
         
         <Button x:Name="testBt" Content="Converter" Click="testBt_Click" ></Button>
 
+        <Button Content="CollectionView" Click="Button_Click"/>
+
     </UniformGrid>
 </Window>

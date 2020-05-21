@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Windows.Threading;
 using WPFCommon.Practice.Adorners;
 using WPFCommon.Practice.Converters;
+using WPFCommon.Practice.Databinding;
 
 namespace Common
 {
@@ -52,6 +53,13 @@ namespace Common
             AdornersTestUC dialog = new AdornersTestUC();
             dialogWindow.Content = dialog;
             dialogWindow.ShowDialog();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Window window = new ColltionViewPractice();
+            window.ShowDialog();
+
         }
     }
 }

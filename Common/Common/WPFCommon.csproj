@@ -98,6 +98,8 @@
     <Compile Include="Common\Paging\Pager.cs" />
     <Compile Include="Common\Proxy\ObjectProxy.cs" />
     <Compile Include="Common\PubSub\Upta\Hub.cs" />
+    <Compile Include="Common\RoutedEvents\AttachedSwipeEvent.cs" />
+    <Compile Include="Common\RoutedEvents\NonAttachedSwipeEvent.cs" />
     <Compile Include="Common\Tasking\TaskInfo.cs" />
     <Compile Include="Common\Utils.cs" />
     <Compile Include="Common\ValidationRules\PhoneNumberValidationRule.cs" />

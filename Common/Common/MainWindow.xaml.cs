@@ -61,5 +61,10 @@ namespace Common
             window.ShowDialog();
 
         }
+
+        private void button_Swipe(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("button_Swipe");
+        }
     }
 }

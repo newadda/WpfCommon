@@ -6,6 +6,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls.Primitives;
 using System.Windows.Media;
 
 namespace WPFCommon.Common
@@ -34,7 +35,9 @@ namespace WPFCommon.Common
                 throw new ArgumentException("Argument is not a property", "propertyExpression");
             }
 
+            
             return property.Name;
+            
         }
 
 

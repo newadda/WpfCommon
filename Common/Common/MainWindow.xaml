@@ -33,6 +33,10 @@
         <Button x:Name="testBt" Content="Converter" Click="testBt_Click" ></Button>
 
         <Button Content="CollectionView" Click="Button_Click"/>
-       
+
+        <Button Content="test" RoutedEvents:AttachedSwipeEvent.Swipe="button_Swipe"></Button>
+
+        <Button Content="test2" RoutedEvents:NonAttachedSwipeEvent.Swipe="button_Swipe"></Button>
+
     </UniformGrid>
 </Window>

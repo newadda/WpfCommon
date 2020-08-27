@@ -17,10 +17,9 @@ namespace WPFCommon.Common.RoutedEvents
         static NonAttachedSwipeEvent()
         {
             EventManager.RegisterClassHandler(typeof(NonAttachedSwipeEvent), SwipeEvent, new RoutedEventHandler(LocalOn));
-            EventManager.RegisterClassHandler(typeof(NonAttachedSwipeEvent), UIElement.MouseDownEvent, new RoutedEventHandler(LocalOn));
-    
-
         }
+
+
         internal static void LocalOn(object sender, RoutedEventArgs e)
         {
             e.Handled = false;

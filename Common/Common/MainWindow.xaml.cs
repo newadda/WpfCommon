@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -16,6 +17,7 @@ using System.Windows.Threading;
 using WPFCommon.Practice.Adorners;
 using WPFCommon.Practice.Converters;
 using WPFCommon.Practice.Databinding;
+using WPFCommon.Practice.Style;
 
 namespace Common
 {
@@ -65,6 +67,13 @@ namespace Common
         private void button_Swipe(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("button_Swipe");
+               
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Window dialogWindow = new StyleTest01();
+            dialogWindow.ShowDialog();
         }
     }
 }

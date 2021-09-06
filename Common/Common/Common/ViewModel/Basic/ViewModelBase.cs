@@ -35,6 +35,7 @@ namespace WPFCommon.Common.ViewModel.Basic
             {
                 this.PropertyChanged(this, e);
             }
+          
         }
 
 

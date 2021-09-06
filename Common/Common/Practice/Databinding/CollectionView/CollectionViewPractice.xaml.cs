@@ -60,6 +60,7 @@ namespace WPFCommon.Practice.Databinding
             {
                 return;
             }
+            
 
             view.Filter = item => {
                 var temp = item as KeyValueModel;

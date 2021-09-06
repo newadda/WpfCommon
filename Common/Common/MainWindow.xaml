@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:Common"
         xmlns:Practice="clr-namespace:WPFCommon.Practice" 
         xmlns:Practice.Dialogs="clr-namespace:WPFCommon.Practice.Controls.Dialogs" 
+        xmlns:Practice.CustomContorls="clr-namespace:WPFCommon.Practice.Controls.CustomControls" 
         xmlns:Converters="clr-namespace:WPFCommon.Practice.Converters"
         xmlns:RoutedEvents="clr-namespace:WPFCommon.Common.RoutedEvents" 
     x:Class="Common.MainWindow"
@@ -33,10 +34,15 @@
         <Button x:Name="testBt" Content="Converter" Click="testBt_Click" ></Button>
 
         <Button Content="CollectionView" Click="Button_Click"/>
+        
+        <Button Content="style01" Click="Button_Click_1"></Button>
 
         <Button Content="test" RoutedEvents:AttachedSwipeEvent.Swipe="button_Swipe"></Button>
 
         <Button Content="test2" RoutedEvents:NonAttachedSwipeEvent.Swipe="button_Swipe"></Button>
+
+        <Practice.CustomContorls:NumericUpDown Margin="0,0,5,-28" ></Practice.CustomContorls:NumericUpDown>
+        
 
     </UniformGrid>
 </Window>

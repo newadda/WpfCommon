@@ -1,0 +1,30 @@
+﻿<Window x:Class="WPFCommon.Practice.Style.StyleTest01"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFCommon.Practice.Style"
+        mc:Ignorable="d"
+        Title="StyleTest01" Height="300" Width="300">
+    <Grid>
+        <ProgressBar HorizontalAlignment="Left" Height="10" Margin="35,158,0,0" VerticalAlignment="Top" Width="151" Maximum="100" Value="{Binding ElementName=slider,Path=Value}">
+            <ProgressBar.Style>
+                <Style TargetType="ProgressBar">
+                    <Style.Triggers>
+                        <EventTrigger RoutedEvent="ValueChanged">
+                            <EventTrigger.Actions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Duration="0:0:1" Storyboard.TargetProperty="Value" To="{Binding Value}" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger.Actions>
+                        </EventTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ProgressBar.Style>
+        </ProgressBar>
+        <Slider x:Name="slider" HorizontalAlignment="Left" Margin="35,203,0,0" VerticalAlignment="Top" Width="151" Maximum="100" Value="50"/>
+
+    </Grid>
+</Window>

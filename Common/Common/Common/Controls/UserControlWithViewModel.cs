@@ -54,6 +54,9 @@ namespace WPFCommon.Common.Controls
         {
             RoutedEventArgs newEventArgs = new RoutedEventArgs(UserControlWithViewModel.ViewModelChangedEvent, newViewModel);
             RaiseEvent(newEventArgs);
+
+           
+
         }
 
 
@@ -61,6 +64,7 @@ namespace WPFCommon.Common.Controls
         {
             set { SetValue(ViewModelProperty, value); }
             get { return (Object)GetValue(ViewModelProperty); }
+            
         }
 
     }

@@ -113,6 +113,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Practice\Controls\CustomControls\NumericUpDown.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Practice\Controls\Dialogs\DialogTest.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -129,6 +133,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Practice\Style\StyleTest01.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Practice\UserControl1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -142,7 +150,7 @@
     <Compile Include="Practice\Adorners\AdornersTestUC.xaml.cs">
       <DependentUpon>AdornersTestUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Practice\Controls\CustomControls\NumberTextBox.cs" />
+    <Compile Include="Practice\Controls\CustomControls\NumericUpDown.cs" />
     <Compile Include="Practice\Controls\Dialogs\DialogTest.xaml.cs">
       <DependentUpon>DialogTest.xaml</DependentUpon>
     </Compile>
@@ -157,6 +165,9 @@
       <DependentUpon>CollectionViewPractice.xaml</DependentUpon>
     </Compile>
     <Compile Include="Practice\Databinding\CollectionView\KeyValueModel.cs" />
+    <Compile Include="Practice\Style\StyleTest01.xaml.cs">
+      <DependentUpon>StyleTest01.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Practice\UserControl1.xaml.cs">
       <DependentUpon>UserControl1.xaml</DependentUpon>
     </Compile>
